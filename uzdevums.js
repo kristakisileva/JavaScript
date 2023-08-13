@@ -1,36 +1,68 @@
+// <!Uzdevumi>
+// <!JavaScript pamati (mainīgie, datu tipi)>
+
+//1. Definē mainīgo ar nosaukumu "vārds", "vecums", "irStudents" un piešķir tiem vērtību. 
+//Izdrukā mainīgā vērtību uz konsoles.
+
 let firstName = "Krista";
 let age = 34;
 let isStudent = true;
+
+console.log(firstName, age, isStudent);
+
+//2. Definē mainīgo ar nosaukumu "augļi" un piešķir tam masīvu ar augļiem. Izdrukā masīvu uz konsoles.
+
 let fruits = ["orange", "banana", "kivi"];
+console.log(fruits);
+
+//3. Definē mainīgo ar nosaukumu "persona" un piešķir tam objektu ar īpašībām, piemēram, vārds, vecums un vai ir students.
+
 let person = {
     personName: "Marija",
     personAge: 8,
     personIsStudent: false
 };
+console.log(person);
 
-console.log(firstName, age, isStudent);
-console.log(fruits);
+//4. Izveido funkciju, kurā definē mainīgo ar nosaukumu "x" un piešķir tam vērtību 5. Izdrukā "x" vērtību funkcijā.
 
-function myFunction() {
+function task4() {
     let x = 5;
     console.log(x);
 }
-myFunction();
+task4();
 
-// let y = 10;
-// function logY() {
-//     console.log(y);
-// }
-// logY();
+// 5. Ārpus funkcijas definē mainīgo ar nosaukumu "v" un piešķir tam vērtību 10. Izdrukā "v" vērtību funkcijā.
+
+let V = 10;
+function task5() {
+    console.log(V);
+}
+task5();
+
+// 6. Izveido funkciju, kurā definē mainīgo un piešķir tam vērtību.Izdrukā mainīgā vērtību funkcijā un ārpus tās.
 
 function task6() {
-    let z = 15;
-    console.log(z);
+    let OO = 15;
+    console.log(OO);
 }
 task6()
-// Operatori 
 
-// Izveido programmu, kas saņem divus skaitļus kā ievadi un aprēķina to summu, izmantojot saskaitīšanas operatoru (+).
+//7. Izveido mainīgo ārpus funkcijas un piešķir tam vērtību.Funkcijā definē mainīgo ar to pašu nosaukumu 
+//un piešķir tam citu vērtību.Izdrukā mainīgā vērtību funkcijā.
+
+let value = 30;
+function task7() {
+    let value = 28;
+    console.log(value);
+}
+task7()
+
+// <!Operatori >
+
+// !== nomaina vērtību uz pretējo
+
+//1. Izveido programmu, kas saņem divus skaitļus kā ievadi un aprēķina to summu, izmantojot saskaitīšanas operatoru (+).
 
 console.log(6 + 9);
 function aritmetics(one, two) {
@@ -38,14 +70,14 @@ function aritmetics(one, two) {
 }
 aritmetics(6, 9);
 
-// Izveido mainīgo ar nosaukumu "num" un piešķir tam vērtību 10. Palielini "num" vērtību par 5, 
+//2. Izveido mainīgo ar nosaukumu "num" un piešķir tam vērtību 10. Palielini "num" vērtību par 5, 
 //izmantojot piešķiršanas saskaitīšanas operatoru (+=)
 
 let num = 10;
 num += 5;
 console.log(num)
 
-//Plūsma (control flow)
+// <!Plūsma (control flow)>
 
 //1. Izveido programmu, kas pārbauda, vai dots skaitlis ir pozitīvs, negatīvs vai nulle, izmantojot if-else izteiksmi. 
 //Izdrukā "Pozitīvs", ja skaitlis ir lielāks par 0, "Negatīvs", ja tas ir mazāks par 0, un "Nulle", ja tas ir vienāds ar 0.
@@ -105,7 +137,7 @@ switch (diena) {
 //Izmanto dalījuma atlikuma operatoru (%), lai pārbaudītu, vai skaitlis ir pāra.
 
 for (let i = 1; i <= 20; i++) {
-    if (i % 2 ===0) {
+    if (i % 2 === 0) {
         console.log(i);
     }
 }
@@ -116,62 +148,119 @@ for (let i = 1; i <= 20; i++) {
 
 let skaitītājs = 0;
 while (skaitītājs < 5) {
-console.log("Sveiki")
+    console.log("Sveiki")
     skaitītājs += 1;
 }
 
 //<!Funkcijas>
 
-//1. Uzraksti funkciju ar nosaukumu "greeting", kas ņem vārdu kā parametru un izdrukā sveiciena ziņu ar šo
+//1. Uzraksti funkciju ar nosaukumu "sveiciens", kas ņem vārdu kā parametru un izdrukā sveiciena ziņu ar šo
 //vārdu. Piemēram, ja vārds ir "Jānis", funkcija izdrukās "Sveiki, Jānis!".
 
-
+const ffName = "Krista";
+const texts1 = "Sveiki, ";
+const texts2 = "!";
+console.log(texts1 + ffName + texts2);
 
 //2. Uzraksti funkciju ar nosaukumu "calculateArea", kas ņem taisnstūra garumu un platumu kā parametrus 
 //un atgriež taisnstūra laukumu.
 
-function calculateArea (garums, platums) {
+function calculateArea(garums, platums) {
     return (garums * platums);
 }
-let resultArea = calculateArea(5,6);
-    console.log (("Taisnstūra laukums ir" , {resultArea}))
+let resultArea = calculateArea(5, 6);
+console.log(("Taisnstūra laukums ir", resultArea))
 
 //3. Uzraksti funkciju ar nosaukumu "isOdd", kas ņem skaitli kā parametru un atgriež true, ja tas ir pāra
 //skaitlis, un false, ja tas ir nepāra skaitlis. Izmanto dalījuma atlikuma operatoru (%), lai pārbaudītu, vai
 //skaitlis ir pāra.
 
-function is0dd (number0dd) {
-    return (number0dd % 2 === 0 ? "pāra skaitlis": "nepāra skaitlis");
+function is0dd(number0dd) {
+    return (number0dd % 2 === 0 ? "pāra skaitlis" : "nepāra skaitlis");
 }
 let result0dd = is0dd(19);
-console.log(("Cipars ir" , {result0dd}))
+console.log(("Cipars ir", result0dd))
 
 //4. Uzraksti funkciju ar nosaukumu "calculateSum", kas ņem masīvu ar skaitļiem kā parametru un atgriež to summu.
 
 function calculateSum() {
-    const numbers =[1, 1, 5, 1];
-    let sum =9;
-    numbers.forEach (num=> {sum +- num;});
+    const numbers = [1, 1, 5, 1];
+    let sum = 9;
+    numbers.forEach(num => { sum + - num; });
     console.log(sum);
 }
 calculateSum();
 
 //5. Uzraksti funkciju, kas pārbauda vai padotais vārds sakrīt ar esošo vārdu.
 
-const orginalName= "John Stone";
-let enteredName = prompt("Enter a name");
-
-const lowerOrginalName = orginalName.toLowerCase();
-const lowerEnteredName = enteredName.toLowerCase();
-console.log (lowerOrginalName ===lowerEnteredName);
-
-if (orginalName===enteredName) {
-    console.log("Names match");
-} else {
-    console.log ("Names do not match");
+function chechName(giveName) {
+    let curentName = "Vika";
+    return giveName == curentName ? "Vārdi sakrīt" : "Vārdi nesakrīt"
 }
+let checkResult = chechName("Bille");
+console.log(checkResult);
 
-//. Uzraksti funkciju, kas pārbauda vai sarakstā atrodas konkrēts vārds.
+//6. Uzraksti funkciju, kas pārbauda vai sarakstā atrodas konkrēts vārds.//
 
+//1.variants
 
+let str = "Vilma, Sarmīte, Otto";
+let str2 = "Otto";
+console.log(str.lastIndexOf(str2) >= 0);
 
+//2.variants
+
+const data = {
+    categories: [
+        "specialword",
+        "word1",
+        "word2"
+    ]
+}
+console.log(data.categories.includes("specialword"))
+console.log(data.categories.includes("non-exist"))
+
+//3.variants
+
+const saraksts = ["Kika", "Lika", "Nika",];
+console.log(saraksts.includes("Mika"));
+
+//4.variants
+
+const inventory = [
+    { name: "appless" },
+    { name: "bananass" },
+    { name: "cherriess" },
+];
+function FindWord(word) {
+    return word.name === "bananass";
+}
+console.log(inventory.find(FindWord));
+
+//5.variants
+
+const sarakstā = ["appl", "banan", "cherr"];
+function FindWord(word) {
+    return word === "banan";
+}
+console.log(sarakstā.find(FindWord));
+
+//6.variants
+
+const sarakstos = ["zini", "mini", "esi"];
+function FindWordIn(word) {
+    if (word === "esi") {
+        return true;
+    }
+}
+console.log(sarakstos.find(FindWordIn));
+
+//7.variants
+
+const findWord = [`suns`, `zivs`, `vilks`];
+const vaiIr = function (vardi, arr) {
+const find = (element) => element === vardi;
+console.log(arr.findIndex(find));
+};
+vaiIr(`vau`, findWord);
+vaiIr(`suns`, findWord);
