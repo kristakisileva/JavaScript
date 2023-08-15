@@ -58,3 +58,4 @@ function markasdone(a) {
 //4.Sakārtot pogu izskatu (lai nav saspiestas visas kreisajā pusē).
 //5.Pielikt klāt beigu termiņu (deadline).
 
+//  style="display: flex; justify-content: space-between;"
